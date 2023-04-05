@@ -1,0 +1,70 @@
+@import "./variables";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $platform;
+  color: $black;
+}
+
+.heading {
+  width: 100%;
+  padding: $space-s $space-l;
+  background-color: $primary;
+  color: $secondary;
+  border-bottom: 1px solid $secondary;
+  cursor: pointer;
+}
+
+.hero {
+  padding: $space 0 $space-xl 0;
+  background-color: $primary;
+  color: $secondary;
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+  }
+}
+
+.photo {
+  margin: $space-xl auto;
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  max-height: 250px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $primary;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  p {
+    margin: 0 auto;
+    padding: $space-s $space-l;
+    text-align: center;
+    max-width: 800px;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  padding: $space-s;
+  width: 100%;
+  color: $secondary;
+  background-color: $primary;
+}

@@ -1,9 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
+import styles from "../styles/Home.module.scss";
+import headshot from "../assets/images/headshot.jpeg";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,110 +12,45 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className={styles.container}>
+        <header className={styles.heading}>
+          <span>RW.</span>
+        </header>
+
+        <section className={styles.hero}>
+          <h1>Hi! I'm Russell</h1>
+        </section>
+
+        <div className={styles.photo}>
+          <Image src={headshot} alt="Sitting in a hammock with my dog" />
+        </div>
+
         <div className={styles.description}>
           <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
+            Welcome! I am a full-stack web developer based in beautiful B.C.
           </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+          <p>
+            I have a breadth of experience in Node.js (and TypeScript), focusing
+            frontend work around React with a similar backend focus on Express.
+            I've had time to explore GraphQL, Prisma, Next.js, MongoDb and
+            PostgreSQL. I've made websites look nice using Tailwind and scss
+            modules, and I've deployed websites using AWS (I have the AWS
+            Developer Associate Certification), Heroku, Netlify, and probably a
+            couple other services.
+          </p>
+          <p>
+            Aside from coding I like to hang with my doggo and enjoy the
+            outdoors we're blessed with in BC - mainly consists of
+            walking/hiking when it's nice or snowboarding when it's the winter!
+            I also enjoy reading (History/English degree - sorry, not sorry),
+            music, taking mediocre pictures of cool places, and following
+            basketball and football (both types - #FlyEaglesFly #HalaMadrid).
+          </p>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        <footer className={styles.footer}>
+          <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </footer>
       </main>
     </>
-  )
+  );
 }
